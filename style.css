@@ -1,0 +1,225 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: #f9f9f9;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 200px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* ===== HLAVNÍ OBSAH ===== */
+.content {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    max-width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+/* ===== HD MENU NAHOŘE ===== */
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f8f8;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-radius: 0 0 10px 10px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #28a745;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.menu a.active {
+    background-color: #07be01;
+    color: #fff;
+}
+
+/* ===== TEXTOVÉ BLOKY ===== */
+.textmain,
+.textmain-section,
+.textmain2,
+.textmain3,
+.textmain4,
+.textmain5,
+.textmain6 {
+    max-width: 900px;
+    width: 100%;
+    margin: 25px auto;
+    padding: 30px 35px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    color: #333;
+    line-height: 1.8;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.textmain:hover,
+.textmain-section:hover,
+.textmain2:hover,
+.textmain3:hover,
+.textmain4:hover,
+.textmain5:hover,
+.textmain6:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Nadpisy */
+.textmain h1,
+.textmain2 h1,
+.textmain3 h1,
+.textmain4 h1,
+.textmain5 h1,
+.textmain6 h1 {
+    font-size: 36px;
+    color: #07be01;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.textmain h2,
+.textmain2 h2,
+.textmain3 h2,
+.textmain4 h2,
+.textmain5 h2,
+.textmain6 h2 {
+    font-size: 26px;
+    color: #07be01;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #28a745;
+    padding-bottom: 8px;
+}
+
+/* Odstavce */
+.textmain p,
+.textmain2 p,
+.textmain3 p,
+.textmain4 p,
+.textmain5 p,
+.textmain6 p {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+/* Seznamy */
+.textmain ul,
+.textmain2 ul,
+.textmain3 ul,
+.textmain4 ul,
+.textmain5 ul,
+.textmain6 ul {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.textmain li,
+.textmain2 li,
+.textmain3 li,
+.textmain4 li,
+.textmain5 li,
+.textmain6 li {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+/* Odkazy */
+a {
+    color: #7289da;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #5865f2;
+    text-decoration: underline;
+}
+
+/* ===== RESPONZIVITA ===== */
+@media (max-width: 900px) {
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .logo img {
+        width: 140px;
+        margin: 10px 0;
+    }
+}
